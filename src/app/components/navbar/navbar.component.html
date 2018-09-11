@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="../../../assets/myUkraineV2.png" width="200" height="100" class="d-inline-block" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Платформa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/social-contract" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Новий суспільний договір</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Академія
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Мистецтво успішних змін</a>
+          <a class="dropdown-item" href="#">Мистецтво комунікації та взаємопорозуміння</a>
+          <a class="dropdown-item" href="#">Соціальне підприємництво</a>
+          <a class="dropdown-item" href="#">Медіаграмотність</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/alterna-tv" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Alterna.TV</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Хто ми?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contacts" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Контакти</a>
+      </li>
+    </ul>
+    <div  class="ml-auto mr-3">
+      <ul *ngIf="appUser as user; else anonymosUser" class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{appUser.name || appUser.email}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" routerLink="/all-projects">Проекти</a>
+            <ng-container *ngIf="appUser.isAdmin">
+              <a class="dropdown-item" routerLink="/admin/projects">Admin</a>
+            </ng-container>
+            <a class="dropdown-item" (click)="logout()">Вихід</a>
+          </div>
+        </li>
+      </ul>
+      <ng-template #anonymosUser>
+        <ul  class="navbar-nav">
+          <li  class="nav-item">
+            <a  class="nav-link" routerLink="/login">Реєстрація</a>
+          </li>
+          <li  class="nav-item">
+            <a  class="nav-link" routerLink="/sign-in">Вхід</a>
+          </li>
+        </ul>
+      </ng-template>
+    </div>
+  </div>
+</nav>

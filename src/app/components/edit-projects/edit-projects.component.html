@@ -1,0 +1,98 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <form #form="ngForm" (ngSubmit)="editProject(form.value)">
+        <div class="form-group">
+          <label for="title">Назва проекту</label>
+          <input
+            #title="ngModel"
+            ngModel
+            name="title"
+            id="title"
+            type="text"
+            class="form-control"
+            required
+          >
+          <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+            Це поле обов'язкове.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description">Опис проекту</label>
+          <!--<textarea name="description"-->
+          <!--id="description"-->
+          <!--cols="63" rows="10"-->
+          <!--ngModel-->
+          <!--#description="ngModel"-->
+          <!--required-->
+          <!--&gt;</textarea>-->
+
+          <input
+            #description="ngModel"
+            ngModel
+            name="description"
+            id="description"
+            type="text"
+            class="form-control"
+            required
+          >
+          <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
+            Це поле обов'язкове.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="city">Місто</label>
+          <input
+            #city="ngModel"
+            ngModel
+            name="city"
+            id="city"
+            type="text"
+            class="form-control"
+            required
+          >
+          <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+            Це поле обов'язкове.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="categories">Область</label>
+          <select
+            #categories="ngModel"
+            ngModel
+            name="categories"
+            id="categories"
+            class="form-control"
+            required
+          >
+            <option value="">Виберіть область</option>
+            <option *ngFor="let c of categories$ | async" [value]="c.name">{{c.name}}</option>
+          </select>
+          <div class="alert alert-danger" *ngIf="categories.touched && categories.invalid">
+            Це поле обов'язкове.
+          </div>
+        </div>
+        <button class="btn btn-primary mb-lg-5">Зберегти</button>
+      </form>
+      <!--/form-->
+    </div>
+    <!--/col-md-6-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="card text-center">-->
+    <!--<div class="card-header">-->
+    <!--{{title.value}}-->
+    <!--</div>-->
+    <!--<div class="card-body">-->
+    <!--<h5 class="card-title">{{description.value}}</h5>-->
+    <!--<p class="card-text">{{city.value}}</p>-->
+    <!--&lt;!&ndash;<a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="card-footer text-muted">-->
+    <!--{{categories.value}}-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/col-md-6&ndash;&gt;-->
+  </div>
+</div>
+

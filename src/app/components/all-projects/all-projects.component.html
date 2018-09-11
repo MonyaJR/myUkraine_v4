@@ -1,0 +1,26 @@
+<div class="container mt-3">
+  <a routerLink="/all-projects/new" class="btn btn-primary mb-3">Додати новий проект</a>
+  <div class="row">
+    <table class="table project-table">
+      <thead>
+        <tr>
+          <th>Назва проекту</th>
+          <th>Опис проекту</th>
+          <th>Місто</th>
+          <th>Область</th>
+        </tr>
+      </thead>
+      <tbody class="project-table-body">
+        <tr *ngFor="let p of projects$ | async">
+          <td>{{p.title}}</td>
+          <td>{{p.description}}</td>
+          <td>{{p.city}}</td>
+          <td>{{p.categories}}</td>
+          <!--<td>-->
+            <!--<a [routerLink]="['/all-projects/', p.$key]">Edit</a>-->
+          <!--</td>-->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
