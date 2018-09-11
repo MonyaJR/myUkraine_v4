@@ -14,6 +14,11 @@
   min-width: 500px;
   text-align: justify;
 }
+/*===== Google Map Start =====*/
+agm-map {
+  height: 300px;
+}
+/*===== Google Map End =====*/
 /*===== Projects Style End =====*/
 /*===== Custom Style End =====*/
 
