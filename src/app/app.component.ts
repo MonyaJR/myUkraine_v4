@@ -19,7 +19,7 @@ export class AppComponent {
       if (user) {
         userService.saveUserFirebase(user);
 
-         // let returnUrl = localStorage.getItem('returnUrl');
+         // const returnUrl = localStorage.getItem('returnUrl');
          // router.navigateByUrl(returnUrl);
          router.navigate(['platform']);
       }

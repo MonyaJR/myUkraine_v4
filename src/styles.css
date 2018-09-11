@@ -1,9 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 /*===== Custom Style Start =====*/
-.text-width{
-  max-width: 750px;
-  margin: auto;
-}
 .dropdown-toggle{
   cursor: pointer;
 }
@@ -14,8 +10,8 @@
 .project-table thead th {
   text-align: center;
 }
-.project-table-body tr td{
-  max-width: 500px;
+.project-description{
+  min-width: 500px;
   text-align: justify;
 }
 /*===== Projects Style End =====*/

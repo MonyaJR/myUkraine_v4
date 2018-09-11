@@ -29,7 +29,7 @@ import { ProjectService } from "./services/project.service";
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {AdminAuthGuardService} from './services/admin-auth-guard.service';
 import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
-import { EditProjectsComponent } from './components/edit-projects/edit-projects.component';
+import { DataTableModule } from 'angular-4-data-table';
 
 
 
@@ -50,12 +50,12 @@ import { EditProjectsComponent } from './components/edit-projects/edit-projects.
     AllProjectsComponent,
     AddProjectComponent,
     SignInComponent,
-    AdminProjectsComponent,
-    EditProjectsComponent
+    AdminProjectsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    DataTableModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

@@ -16,7 +16,6 @@ import {AllProjectsComponent} from "./components/all-projects/all-projects.compo
 import {SignInComponent} from "./components/sign-in/sign-in.component";
 import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
 import {AdminAuthGuardService} from './services/admin-auth-guard.service';
-import {EditProjectsComponent} from './components/edit-projects/edit-projects.component';
 
 
 const routes: Routes = [

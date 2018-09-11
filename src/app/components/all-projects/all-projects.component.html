@@ -1,26 +1,61 @@
 <div class="container mt-3">
   <a routerLink="/all-projects/new" class="btn btn-primary mb-3">Додати новий проект</a>
+  <span>
+    <input
+      #query
+      (keyup) = "filterProjects(query.value)"
+      type="text" class="form-control" placeholder="Пошук по назві...">
+  </span>
   <div class="row">
-    <table class="table project-table">
-      <thead>
-        <tr>
-          <th>Назва проекту</th>
-          <th>Опис проекту</th>
-          <th>Місто</th>
-          <th>Область</th>
-        </tr>
-      </thead>
-      <tbody class="project-table-body">
-        <tr *ngFor="let p of projects$ | async">
-          <td>{{p.title}}</td>
-          <td>{{p.description}}</td>
-          <td>{{p.city}}</td>
-          <td>{{p.categories}}</td>
-          <!--<td>-->
-            <!--<a [routerLink]="['/all-projects/', p.$key]">Edit</a>-->
-          <!--</td>-->
-        </tr>
-      </tbody>
-    </table>
+
+    <!--add Data Table -->
+    <data-table
+      class="text-justify"
+      [items]="items"
+      [itemCount]="itemCount"
+      (reload)="reloadItems($event)"
+    >
+      <data-table-column
+        [property]="'title'"
+        [header]="'Назва проекту'"
+        [sortable]="true"
+        [resizable]="true"
+      >
+        <ng-template #dataTableCell let-item="item">
+          {{item.title}}
+        </ng-template>
+      </data-table-column>
+      <data-table-column
+        [property]="'description'"
+        [header]="'Опис проекту'"
+        [sortable]="true"
+        [resizable]="true"
+        [width]="500"
+      >
+        <ng-template #dataTableCell let-item="item">
+          {{item.description}}
+        </ng-template>
+      </data-table-column>
+      <data-table-column
+        [property]="'city'"
+        [header]="'Місто'"
+        [sortable]="true"
+        [resizable]="true"
+      >
+        <ng-template #dataTableCell let-item="item">
+          {{item.city}}
+        </ng-template>
+      </data-table-column>
+      <data-table-column
+        [property]="'categories'"
+        [header]="'Область'"
+        [sortable]="true"
+        [resizable]="true"
+      >
+        <ng-template #dataTableCell let-item="item">
+          {{item.categories}}
+        </ng-template>
+      </data-table-column>
+    </data-table>
   </div>
 </div>
