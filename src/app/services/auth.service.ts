@@ -20,13 +20,12 @@ export class AuthService {
     this.user$ = afAuth.authState;
   }
 
-  checkAuth() {
-    return this.afAuth.authState.map(auth => auth);
-  }
-
   loginEmail( email: string, password: string) {
     return new Promise((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(user => {
+          user.sendEmailVerification();
+        })
         .then(user$ => resolve(user$))
         .catch(err => reject(err));
     });

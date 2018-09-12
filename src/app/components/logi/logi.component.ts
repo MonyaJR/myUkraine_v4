@@ -26,18 +26,18 @@ export class LogiComponent implements OnInit {
     // });
   }
 
-  loginForGoogle(){
+  loginForGoogle() {
     this.auth.loginForGoogle();
   }
 
   onSubmitLogin() {
     this.auth.loginEmail(this.email, this.password)
       .then(user$ => {
-        this.router.navigate(['/platform'])
+        this.router.navigate(['/platform']);
       })
       .catch(err => {
         console.log(err);
-      })
+      });
   }
 
 }
