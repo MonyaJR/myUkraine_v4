@@ -16,6 +16,9 @@ import {AllProjectsComponent} from "./components/all-projects/all-projects.compo
 import {SignInComponent} from "./components/sign-in/sign-in.component";
 import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
 import {AdminAuthGuardService} from './services/admin-auth-guard.service';
+import {PrivacyPolicyComponent} from './components/privacy-policy/privacy-policy.component';
+import {UserAgreementComponent} from './components/user-agreement/user-agreement.component';
+import {ResetEmailComponent} from './components/reset-email/reset-email.component';
 
 
 const routes: Routes = [
@@ -32,7 +35,10 @@ const routes: Routes = [
   {path: 'all-projects/new', component: AddProjectComponent, canActivate: [AuthGuardService]},
   {path: 'all-projects/id:', component: AddProjectComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
   {path: 'admin/projects', component: AdminProjectsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
-  // {path: '**', component: NotFoundComponent}
+  {path: 'privacy-policy', component: PrivacyPolicyComponent},
+  {path: 'user-agreement', component: UserAgreementComponent},
+  {path: 'reset-email', component: ResetEmailComponent},
+  {path: '**', component: NotFoundComponent}
 
 ];
 

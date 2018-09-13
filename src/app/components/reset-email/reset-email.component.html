@@ -1,0 +1,19 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+  <div class="row">
+    <div class="col-md-6 mx-auto text-center mt-3">
+      <h3>Введіть адрес електроної адреси</h3>
+      <form>
+        <input
+          class="w-100"
+          type="text"
+          id="emailReset"
+          [(ngModel)]="emailReset"
+          name="emailReset"
+          placeholder="Введіть адрес електроної адреси"
+          required=""
+        >
+      </form>
+      <button class="btn btn-primary mt-3 mb-3" (click)="resetPassword(emailReset)">Відновити пароль</button>
+    </div>
+  </div>
+</div>

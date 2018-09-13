@@ -25,10 +25,25 @@
         >
         <button class="btn btn-lg btn-primary btn-block mt-3 mb-3" type="submit">Увійти</button>
       </form>
-      <span
-        (click)="loginForGoogle()"
-        class="btn-pointer"
-      ><img src="../../../assets/google_icon.png" alt="" width="50" height="50"></span>
+      <div class="row d-flex align-items-center text-center">
+        <div class="col-md-6 ">
+          <span class="mb-3 mt-3">Або увійдіть за допомогою</span>
+          <span
+            (click)="loginForGoogle()"
+            class="btn-pointer"
+          ><img src="../../../assets/google_icon.png" alt="" width="50" height="50"></span>
+          <span
+            (click)="loginForFacebook()"
+            class="btn-pointer"
+          ><img src="../../../assets/fb_icon.png" alt="" width="50" height="50">
+          </span>
+        </div>
+        <!--/col-md-6-->
+        <div class="col-md-6">
+          <button class="btn-outline-primary btn-pointer" routerLink="/reset-email">Забули пароль</button>
+        </div>
+      <!--/row -->
     </div>
   </div>
+</div>
 </div>

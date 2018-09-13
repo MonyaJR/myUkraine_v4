@@ -12,6 +12,7 @@ import {Router} from "@angular/router";
 export class LogiComponent implements OnInit {
   email: string;
   password: string;
+  resetEmail;
 
   constructor(private auth: AuthService,
               private router: Router
@@ -38,6 +39,14 @@ export class LogiComponent implements OnInit {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  loginForFacebook() {
+    this.auth.FacebookLogin();
+  }
+
+  resetPassword(email: string) {
+    this.auth.resetPassword(email);
   }
 
 }

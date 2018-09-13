@@ -39,7 +39,7 @@ export class AuthService {
     });
   }
 
-  loginForGoogle(){
+  loginForGoogle() {
     // let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl' || '/');
     // localStorage.setItem('returnUrl', returnUrl);
 
@@ -59,5 +59,15 @@ export class AuthService {
       });
   }
 
+  FacebookLogin() {
+    this.afAuth.auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider());
+  }
+
+  resetPassword(email: string) {
+    var auth = firebase.auth();
+    return auth.sendPasswordResetEmail(email)
+      .then(() => console.log('email sent'))
+      .catch((error) => console.log(error));
+  }
 
   }

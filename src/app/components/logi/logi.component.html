@@ -25,13 +25,28 @@
         >
         <button class="btn btn-lg btn-primary btn-block mt-3 mb-3" type="submit">Реєструватися</button>
       </form>
-      <span
-        (click)="loginForGoogle()"
-        class="btn-pointer"
-      ><img src="../../../assets/google_icon.png" alt="" width="50" height="50"></span>
+      <!--<div class="row">-->
+        <div class="col-md-6 mx-auto text-center">
+          <span class="mb-3 mt-3">Або увійдіть за допомогою</span>
+          <span
+            (click)="loginForGoogle()"
+            class="btn-pointer"
+          ><img src="../../../assets/google_icon.png" alt="Увійти через Google" width="50" height="50"></span>
+          <span
+            (click)="loginForFacebook()"
+            class="btn-pointer"
+          ><img src="../../../assets/fb_icon.png" alt="" width="50" height="50">
+          </span>
+        </div>
+        <!--/col-md-6-->
+      </div>
+      <!--/row -->
     </div>
-  </div>
+    <!--/col-md-6-->
+  <!--</div>-->
+  <!--/row -->
 </div>
+<!--/container -->
 
 
 

@@ -1,10 +1,10 @@
-import {environment} from "../environments/environment";
+import {environment} from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from "angularfire2";
-import { AngularFireDatabaseModule } from "angularfire2/database";
-import { AngularFireAuthModule } from "angularfire2/auth";
-import { FormsModule } from "@angular/forms";
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -19,19 +19,20 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SliderNavComponent } from './components/slider-nav/slider-nav.component';
 import { LogiComponent } from './components/logi/logi.component';
-import {AuthService} from "./services/auth.service";
-import {AuthGuardService} from "./services/auth-guard.service";
-import {UserService} from "./services/user.service";
+import {AuthService} from './services/auth.service';
+import {AuthGuardService} from './services/auth-guard.service';
+import {UserService} from './services/user.service';
 import { AllProjectsComponent } from './components/all-projects/all-projects.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
-import {CategoryService} from "./services/category.service";
-import { ProjectService } from "./services/project.service";
+import {CategoryService} from './services/category.service';
+import { ProjectService } from './services/project.service';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {AdminAuthGuardService} from './services/admin-auth-guard.service';
 import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
 import { DataTableModule } from 'angular-4-data-table';
-
-
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { UserAgreementComponent } from './components/user-agreement/user-agreement.component';
+import { ResetEmailComponent } from './components/reset-email/reset-email.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,10 @@ import { DataTableModule } from 'angular-4-data-table';
     AllProjectsComponent,
     AddProjectComponent,
     SignInComponent,
-    AdminProjectsComponent
+    AdminProjectsComponent,
+    PrivacyPolicyComponent,
+    UserAgreementComponent,
+    ResetEmailComponent
   ],
   imports: [
     BrowserModule,
