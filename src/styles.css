@@ -1,10 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/*===== Reset Start ===== */
+a:hover {
+  text-decoration: none !important;
+}
+/*===== Reset End ===== */
 /*===== Custom Style Start =====*/
 .dropdown-toggle{
   cursor: pointer;
 }
 .btn-pointer{
   cursor: pointer;
+}
+.login-form-border {
+  border: 2px solid #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 7px 7px 3px rgba(0,0,0,.2);
 }
 /*===== Projects Style Start =====*/
 .project-table thead th {

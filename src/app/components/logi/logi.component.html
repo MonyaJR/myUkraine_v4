@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
+  <div class="row mb-5 mt-5">
+    <div class="col-md-6 mx-auto login-form-border">
       <form novalidate #form1="ngForm" (ngSubmit)="onSubmitLogin()" class="form-signin text-center">
         <img class="mb-4" src="../../../assets/myUkraineV2.png" alt="" width="250" height="125">
         <h1 class="h3 mb-3 font-weight-normal">Зареєструйтесь будь ласка</h1>
@@ -26,7 +26,7 @@
         <button class="btn btn-lg btn-primary btn-block mt-3 mb-3" type="submit">Реєструватися</button>
       </form>
       <!--<div class="row">-->
-        <div class="col-md-6 mx-auto text-center">
+        <div class="col-md-6 mx-auto text-center mb-3">
           <span class="mb-3 mt-3">Або увійдіть за допомогою</span>
           <span
             (click)="loginForGoogle()"
