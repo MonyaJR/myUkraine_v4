@@ -1,8 +1,8 @@
 <div class="container mt-3">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
+  <div class="row mb-5 mt-5">
+    <div class="col-md-6 mx-auto login-form-border">
       <form #form="ngForm" (ngSubmit)="saveProject(form.value)">
-        <div class="form-group">
+        <div class="form-group mt-5">
           <label for="title">Назва проекту</label>
           <input
             #title="ngModel"
@@ -19,23 +19,23 @@
         </div>
         <div class="form-group">
           <label for="description">Опис проекту</label>
-          <!--<textarea name="description"-->
-                    <!--id="description"-->
-                    <!--cols="63" rows="10"-->
-                    <!--ngModel-->
-                    <!--#description="ngModel"-->
-                    <!--required-->
-          <!--&gt;</textarea>-->
+          <textarea name="description"
+                    id="description"
+                    cols="63" rows="10"
+                    ngModel
+                    #description="ngModel"
+                    required
+          ></textarea>
 
-          <input
-            #description="ngModel"
-            ngModel
-            name="description"
-            id="description"
-            type="text"
-            class="form-control"
-            required
-          >
+          <!--<input-->
+            <!--#description="ngModel"-->
+            <!--ngModel-->
+            <!--name="description"-->
+            <!--id="description"-->
+            <!--type="text"-->
+            <!--class="form-control"-->
+            <!--required-->
+          <!--&gt;-->
           <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
             Це поле обов'язкове.
           </div>
@@ -72,7 +72,7 @@
             Це поле обов'язкове.
           </div>
         </div>
-        <button class="btn btn-primary mb-lg-5">Зберегти</button>
+        <button class="btn btn-primary mb-5">Зберегти</button>
       </form>
       <!--/form-->
     </div>
