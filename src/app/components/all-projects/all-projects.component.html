@@ -58,6 +58,16 @@
           {{item.categories}}
         </ng-template>
       </data-table-column>
+      <data-table-column
+        [property]="'linkProject'"
+        [header]="'Детальна інформація'"
+        [sortable]="true"
+        [resizable]="true"
+      >
+        <ng-template #dataTableCell let-item="item">
+          <a [href]="item.linkProject" target="_blank">Інформація</a>
+        </ng-template>
+      </data-table-column>
     </data-table>
   </div>
 </div>

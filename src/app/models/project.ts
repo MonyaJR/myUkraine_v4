@@ -3,5 +3,6 @@ export interface Project {
   description: string;
   city: string;
   categories: string;
+  link: string;
 
 }

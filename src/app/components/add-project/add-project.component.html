@@ -40,6 +40,21 @@
             Це поле обов'язкове.
           </div>
         </div>
+        <div class="form-group mt-5">
+          <label for="linkProject">Посилання проекту</label>
+          <input
+            #linkProject="ngModel"
+            ngModel
+            name="linkProject"
+            id="linkProject"
+            type="text"
+            class="form-control"
+            required
+          >
+          <div class="alert alert-danger" *ngIf="linkProject.touched && linkProject.invalid">
+            Це поле обов'язкове.
+          </div>
+        </div>
         <div class="form-group">
           <label for="city">Місто</label>
           <input
@@ -72,7 +87,7 @@
             Це поле обов'язкове.
           </div>
         </div>
-        <button class="btn btn-primary mb-5">Зберегти</button>
+        <button class="btn btn-primary mb-5" [disabled]="title.invalid || description.invalid || linkProject.invalid || city.invalid || categories.invalid">Зберегти</button>
       </form>
       <!--/form-->
     </div>
